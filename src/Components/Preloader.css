@@ -22,6 +22,7 @@ body {
   transform-origin: center center;
   transform: scale(0.75);
 }
+
 .log {
   position: absolute;
   width: 238px;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import useFetch from "../../../CustomHooks/useFetch";
 import "./HomeCarousel.css";
 
 const HomeCarousel = () => {
@@ -7,9 +6,7 @@ const HomeCarousel = () => {
   const [first, setFirst] = useState([]);
   const [content, setContent] = useState([]);
   const [data, setData] = useState([]);
-  // const { data, loading, error } = useFetch(
-  //   `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`
-  // );
+
 
   useEffect(() => {
     const fetchData = async () => {
