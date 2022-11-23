@@ -33,10 +33,10 @@ function App() {
   
   // PRELOADER
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
     const timeoutID = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timeoutID);
   }, []);
