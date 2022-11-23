@@ -8,12 +8,6 @@ import HotListToday from "../Components/HomeComponents/HotListToday/HotListToday
 import "../Components/Preloader.css";
 
 const Home = () => {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    console.log(loading);
-  }, []);
-
   return (
     <>
       <HomeCarousel />
