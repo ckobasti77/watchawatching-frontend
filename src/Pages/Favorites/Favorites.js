@@ -74,7 +74,7 @@ const Favorites = () => {
             );
           })} */}
           <div
-            className="d-flex justify-content-center align-items-center"
+            className="d-flex text-center justify-content-center align-items-center"
             style={{ minHeight: 600, backgroundColor: "#252525" }}
           >
             <h1
