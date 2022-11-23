@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import useFetch from "../../../CustomHooks/useFetch";
 import "./HomeCarousel.css";
 
-const HomeCarousel = ({ loading, setLoading }) => {
+const HomeCarousel = () => {
   const apiKey = `5dc8da9950191123fe0a706966b868bb`;
   const [first, setFirst] = useState([]);
   const [content, setContent] = useState([]);
@@ -13,7 +13,6 @@ const HomeCarousel = ({ loading, setLoading }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
       try {
         const res = await fetch(
           `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`
@@ -23,9 +22,7 @@ const HomeCarousel = ({ loading, setLoading }) => {
         setData(data);
       } catch (error) {
         console.log(error);
-      } finally {
-        setLoading(false);
-      }
+      } 
     };
     fetchData();
   }, []);
