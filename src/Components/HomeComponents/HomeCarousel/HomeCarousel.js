@@ -21,11 +21,10 @@ const HomeCarousel = ({ loading, setLoading }) => {
         const dataJson = await res.json();
         const data = { ...dataJson }.results;
         setData(data);
-        setLoading(false);
       } catch (error) {
         console.log(error);
       } finally {
-        
+        setLoading(false);
       }
     };
     fetchData();
