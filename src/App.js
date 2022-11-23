@@ -29,6 +29,18 @@ import Favorites from "./Pages/Favorites/Favorites";
 import Settings from "./Components/Account/Account";
 
 function App() {
+
+  
+  // PRELOADER
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    const timeoutID = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timeoutID);
+  }, []);
+
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
 
@@ -56,16 +68,6 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
-  // PRELOADER
-
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    const timeoutID = setTimeout(() => setLoading(false), 3000);
-    return () => clearTimeout(timeoutID);
   }, []);
 
   return (
