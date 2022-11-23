@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div style={{width: '100vw'}}>
       <HomeCarousel loading={loading} setLoading={setLoading} />
       <h1
         className="text-light text-center m-0 py-5"
@@ -28,7 +28,7 @@ const Home = () => {
       <Avatar />
       <MostWatched />
       <Mockups />
-    </>
+    </div>
   );
 };
 
